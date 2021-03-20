@@ -1,31 +1,6 @@
-import matplotlib.pyplot as plt
-import numpy as np
 import random
-
-
-def sigmoid(x):
-    """сигмоидальная функция, работает и с числами, и с векторами (поэлементно)"""
-    return 1 / (1 + np.exp(-x))
-
-
-def sigmoid_prime(x):
-    """производная сигмоидальной функции, работает и с числами, и с векторами (поэлементно)"""
-    return sigmoid(x) * (1 - sigmoid(x))
-
-
-def tanh(x):
-    """гиперболичесий тангенс, работает и с числами, и с векирпами(поэлементно)"""
-    return 2 / (1 + np.exp(-2 * x)) - 1
-
-
-def tanh_prime(x):
-    """производная гиперболического тангенса,
-    работает и с числами, и с векторами (поэлементно)"""
-    return 1 - tanh(x) ** 2
-
-
-# словарь функций - как ключи , и производных от них - как значение.
-func_with_prime = {sigmoid: sigmoid_prime, tanh: tanh_prime}
+import numpy as np
+from functions import sigmoid, sigmoid_prime
 
 
 class Network:
@@ -181,22 +156,6 @@ class Network:
 
 
 def main():
-    # data = np.loadtxt("data.csv", delimiter=",")
-    # pears = data[:, 2] == 1
-    # apples = np.logical_not(pears)
-    # plt.scatter(data[apples][:, 0], data[apples][:, 1], color="red")
-    # plt.scatter(data[pears][:, 0], data[pears][:, 1], color="green")
-    # plt.xlabel("yellowness")
-    # plt.ylabel("symmetry")
-    # plt.show()
-    #
-    # # Подготовим данные
-    #
-    # X = data[:, :-1]
-    # y = data[:, -1]
-    #
-    # X = np.hstack((np.ones((len(y), 1)), X))
-    # y = y.reshape((len(y), 1))  # Обратите внимание на эту очень противную и важную строчку
     nn = Network([3,2] , activations=[sigmoid , sigmoid ])
     nn.biases = [np.array([[-1], [-1]])]
     nn.weights = [np.array([[-1, 1,-1], [ 1, -1, 1]])]
