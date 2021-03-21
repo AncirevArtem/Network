@@ -1,38 +1,23 @@
 import random
 import numpy as np
+from layer import Layer
 from functions import sigmoid, sigmoid_prime
 
 
 class Network:
 
-    def __init__(self, sizes, activations=[sigmoid], output=False):
-        """
-        Список ``sizes`` содержит количество нейронов в соответствующих слоях
-        нейронной сети. К примеру, если бы этот лист выглядел как [2, 3, 1],
-        то мы бы получили трёхслойную нейросеть, с двумя нейронами в первом
-        (входном), тремя нейронами во втором (промежуточном) и одним нейроном
-        в третьем (выходном, внешнем) слое. Смещения и веса для нейронных сетей
-        инициализируются случайными значениями, подчиняющимися стандартному нормальному
-        распределению. Обратите внимание, что первый слой подразумевается слоем,
-        принимающим входные данные, поэтому мы не будем добавлять к нему смещение
-        (делать это не принято, поскольку смещения используются только при
-        вычислении выходных значений нейронов последующих слоёв)
-        activations - функции активации для каждого слоя (кроме входного),
-        по дефолту будет sigmoid
-        """
-
+    def __init__(self, sizes, activations=[sigmoid]):
         self.num_layers = len(sizes)
         assert self.num_layers >= 2, "Неверное число слоёв"
-        self.sizes = sizes
-        self.biases = [np.random.randn(y, 1) for y in sizes[1:]]
-        self.weights = [np.random.randn(y, x)
-                        for x, y in zip(sizes[:-1], sizes[1:])]
-        self.output = output
-        self.num_activations = len(activations)
-        assert self.num_activations == 1 or \
-               self.num_layers == self.num_activations, "Неверное число функций активации"
+        assert len(activations) == 1 or \
+               self.num_layers == len(activations), "Неверное число функций активации"
+        if len(activations) == 1:
+            activations = activations*self.num_layers
+        self.layers = [Layer(n, m, activation) for n, m, activation in
+                       zip(sizes[:-1], sizes[1:], activations)]
 
-        self.activations = activations
+    def getLayers(self):
+        [print(layer.getWeights(), end="\n"*2) for layer in self.layers]
 
     def feedforward(self, a):
         """
@@ -156,13 +141,10 @@ class Network:
 
 
 def main():
-    nn = Network([3,2] , activations=[sigmoid , sigmoid ])
-    nn.biases = [np.array([[-1], [-1]])]
-    nn.weights = [np.array([[-1, 1,-1], [ 1, -1, 1]])]
-    x = np.array([[1], [2], [3]])
-    y = np.array([[0], [1]])
+    nn = Network([8, 4, 2])
+    nn.getLayers()
 
-    print(nn.backprop(x, y))
+
 
 if __name__ == "__main__":
     main()

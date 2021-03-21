@@ -19,13 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5622ed7c-db6b-4672-920b-58700bff2838" name="Default Changelist" comment="test 0.1&#10;testing creating np array and class with usually np scalar. Numpy win so i will create class Layer that basing on numpy matrix.">
-      <change afterPath="$PROJECT_DIR$/venv/functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Network.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Network.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+    <list default="true" id="5622ed7c-db6b-4672-920b-58700bff2838" name="Default Changelist" comment="create files for future network">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Layer.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/layer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/neuron.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +66,7 @@
       <recent name="C:\Users\Asus\PycharmProjects\Network\venv" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Network" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -115,8 +113,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -130,7 +128,23 @@
       <updated>1616196292075</updated>
       <workItem from="1616196294752" duration="5061000" />
       <workItem from="1616258511920" duration="1803000" />
+      <workItem from="1616260344808" duration="4917000" />
     </task>
+    <task id="LOCAL-00001" summary="test 0.1&#10;testing creating np array and class with usually np scalar. Numpy win so i will create class Layer that basing on numpy matrix.">
+      <created>1616260480930</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616260480930</updated>
+    </task>
+    <task id="LOCAL-00002" summary="create files for future network">
+      <created>1616260542041</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616260542041</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,44 +164,45 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test 0.1&#10;testing creating np array and class with usually np scalar. Numpy win so i will create class Layer that basing on numpy matrix." />
-    <option name="LAST_COMMIT_MESSAGE" value="test 0.1&#10;testing creating np array and class with usually np scalar. Numpy win so i will create class Layer that basing on numpy matrix." />
+    <MESSAGE value="create files for future network" />
+    <option name="LAST_COMMIT_MESSAGE" value="create files for future network" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616196391247">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1616196391247" />
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom" timestamp="1616260318001">
+    <state width="1323" height="99" key="GridCell.Tab.0.bottom" timestamp="1616265269912">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616260318001" />
-    <state width="1323" height="121" key="GridCell.Tab.0.center" timestamp="1616260318000">
+    <state width="1323" height="99" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616265269912" />
+    <state width="1323" height="99" key="GridCell.Tab.0.center" timestamp="1616265269912">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1616260318000" />
-    <state width="1323" height="121" key="GridCell.Tab.0.left" timestamp="1616260318000">
+    <state width="1323" height="99" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1616265269912" />
+    <state width="1323" height="99" key="GridCell.Tab.0.left" timestamp="1616265269911">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1616260318000" />
-    <state width="1323" height="121" key="GridCell.Tab.0.right" timestamp="1616260318000">
+    <state width="1323" height="99" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1616265269911" />
+    <state width="1323" height="99" key="GridCell.Tab.0.right" timestamp="1616265269912">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1616260318000" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1616260264576">
+    <state width="1323" height="99" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1616265269912" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1616260550665">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1616260264576" />
-    <state x="205" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1616258921598">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1616260550665" />
+    <state x="205" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1616263162559">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="205" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1616258921598" />
+    <state x="205" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1616263162559" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1616198329085">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1616198329085" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Network$test.coverage" NAME="test Coverage Results" MODIFIED="1616259696452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Network$main.coverage" NAME="main Coverage Results" MODIFIED="1616200269507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/Network$test.coverage" NAME="test Coverage Results" MODIFIED="1616262246279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Network$main.coverage" NAME="main Coverage Results" MODIFIED="1616264323552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
   </component>
 </project>
